@@ -1,0 +1,50 @@
+<div class="panel panel-primary">
+  <!--<div class="panel-heading" style="text-align:left;">Raised</div>-->
+  <div class="panel-body">
+    <!--<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span>-->
+    <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+        <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+        <input #gb type="text" style="color:grey" pInputText size="50" placeholder="Global Filter">
+    </div>
+    <p-dataTable #dt [value]="returnedUnits" selectionMode="single" exportFilename="returnedUnits" [paginator]="true" [rows]="20"
+      [globalFilter]="gb" [responsive]="true" [rowsPerPageOptions]="[20,50,100,500]">
+      <p-header>
+        <div class="ui-helper-clearfix">
+          <p-selectButton [options]="types" [(ngModel)]="selectedType" (onChange)="changeSelectedType()" [style]="{'float':'left'}"></p-selectButton>
+          <button type="button" pButton icon="fa-print" iconPos="left" label="Print" style="float:right"></button>
+          <button type="button" pButton icon="fa-file-o" iconPos="left" label="Export" (click)="dt.exportCSV()" style="float:right"></button>
+        </div>
+      </p-header>
+
+      <p-column field="siteId" header="Site" [sortable]="true"></p-column>
+      <p-column field="orderId" header="Order" [filter]="true" [sortable]="true"></p-column>
+      <p-column field="departmentId" header="Dept Id" [filter]="true" [sortable]="true"></p-column>
+
+      <p-column field="department" header="Dept" [filter]="true" filterMatchMode="equals" [sortable]="true">
+        <!--<ng-template pTemplate="filter" let-col>
+            <p-dropdown [options]="departments" [style]="{'width':'100%'}" (onChange)="dt.filter($event.value,col.field,col.filterMatchMode)" styleClass="ui-column-filter"></p-dropdown>
+        </ng-template>-->
+      </p-column>
+
+
+      <p-column field="sku" header="Sku" [filter]="true" [sortable]="true"></p-column>
+      <p-column field="styleId" header="Style" [filter]="true" [sortable]="true"></p-column>
+      <p-column field="itemDescription" header="Desc" filterMatchMode="contains" [filter]="true" [sortable]="true"></p-column>
+
+      <p-column field="eanCode" header="EAN" [filter]="true" [sortable]="true"></p-column>
+      <p-column field="reason" header="Reason" [filter]="true" filterMatchMode="contains" [sortable]="true"></p-column>
+      <p-column field="quantityReturned" header="Qnt Returned" [filter]="true" [sortable]="true"></p-column>
+      <p-column field="totalPurchasePrice" header="Price" [filter]="true" [sortable]="true"></p-column>
+      <p-column field="currency" header="Cur" [filter]="true" [sortable]="true"></p-column>
+
+      <p-column field="dateReturned" header="Returned Date" [filter]="true" filterMatchMode="contains" [sortable]="true">
+        <ng-template let-unit="rowData" pTemplate="body">
+          {{ unit.dateReturned | convertDate }}
+        </ng-template>
+      </p-column>
+
+      <!--<footer></footer>-->
+    </p-dataTable>
+    <!--</div>-->
+    <!--<div class="panel-footer">Panel footer</div>-->
+  </div>

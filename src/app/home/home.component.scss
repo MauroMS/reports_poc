@@ -1,0 +1,71 @@
+@import './../../assets/scss/landing-pages';
+
+.report-block-reports {
+    color: #fff;
+    background-color: rgb(221, 132, 0);
+
+    .summary-footer {
+        background-color: $landing-footer-color;
+        @extend .white-link-url;
+    }
+}
+
+// .report-block-back-office {
+//     color: #fff;
+//     background-color: rgb(17, 43, 56);
+
+//     .summary-footer {
+//         background-color: $landing-footer-color;
+//         @extend .white-link-url;
+//     }
+// }
+
+// .report-block-fulfilment-view {
+//     color: #fff;
+//     background-color: rgb(141, 164, 45);
+
+//     .summary-footer {
+//         background-color: gray;
+//         @extend .white-link-url;
+//     }
+// }
+
+// .report-block-collect-in-store {
+//     color: #fff;
+//     background-color: rgb(105, 73, 42);
+    
+//     .summary-footer {
+//         background-color: $landing-footer-color;
+//         @extend .white-link-url;
+//     }
+// }
+
+// .report-block-order-options {
+//     color: #fff;
+//     background-color: rgb(183, 57, 0);
+
+//     .summary-footer {
+//         background-color: #7b7276;
+//         @extend .white-link-url;
+//     }
+// }
+
+// .report-block-admin {
+//     color: #fff;
+//     background-color: rgb(124, 64, 105);
+
+//     .summary-footer {
+//         background-color: #27272a;
+//         @extend .white-link-url;
+//     }
+// }
+
+// .report-block-exit {
+//     color: #fff;
+//     background-color: #ff797e;
+
+//     .summary-footer {
+//         background-color: #ff0808;
+//         @extend .white-link-url;
+//     }
+// }
