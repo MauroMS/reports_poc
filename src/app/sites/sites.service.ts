@@ -11,7 +11,7 @@ export class SitesService {
   constructor(private http: Http) {}
 
   getSites() {
-    return this.http.get('src/assets/resources/sites.json')
+    return this.http.get('assets/resources/sites.json')
       .toPromise()
       .then(res => <Site[]> res.json().data)
       .then(data => {

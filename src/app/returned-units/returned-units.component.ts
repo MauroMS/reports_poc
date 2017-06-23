@@ -13,25 +13,26 @@ export class ReturnedUnitsComponent implements OnInit {
 
   returnedUnits: ReturnedUnit[];
   types: SelectItem[];
-  selectedType: '1';
+  selectedType: string;
   sites: SelectItem[];
   selectedSite: string;
-
   dateFrom: Date;
   dateTo: Date;
 
   constructor(private returnedUnitsService: ReturnedUnitsService, private sitesService: SitesService) { }
 
   ngOnInit() {
-    this.changeSelectedType();
     this.types = [];
-    this.types.push({label: 'Harvey Nicols', value: '1'});
+    this.selectedSite = '1';
+    this.selectedType = '1';
+    this.types.push({label: 'Store', value: '1'});
     this.types.push({label: 'Marketplace', value: '2'});
+    this.changeSelectedType();
     this.sitesService.getSitesDropdown().then(ddpSites => this.sites = ddpSites);
   }
 
   changeSelectedType() {
-    if(this.selectedType === '1') {
+    if (this.selectedType === '1') {
       console.log('HN Units');
       this.getHNUnits();
     }else {

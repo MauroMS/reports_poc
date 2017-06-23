@@ -1,5 +1,5 @@
 <div class="panel panel-primary">
-  <div id="divFilters">
+  <div id="divFilters" style="margin-left:20px; margin-top:10px">
     From: <p-calendar [(ngModel)]="dateFrom" [showIcon]="true" dateFormat="dd/mm/yy"></p-calendar> <span style="margin-left:35px">{{dateFrom|date}}</span>
     To: <p-calendar [(ngModel)]="dateTo" [showIcon]="true" dateFormat="dd/mm/yy"></p-calendar> <span style="margin-left:35px">{{dateTo|date}}</span>
     Site: <p-dropdown [options]="sites" [(ngModel)]="selectedSite" [style]="{'width':'150px'}"></p-dropdown>

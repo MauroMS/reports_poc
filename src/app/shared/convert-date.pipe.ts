@@ -7,10 +7,10 @@ import * as moment from 'moment/moment';
 export class ConvertDatePipe implements PipeTransform {
 
   transform(date: Date, pattern: string = 'DD/MM/YYYY HH:mm'): any {
-    if (!date) 
+    if (!date) {
         return date;
-
-    return moment(date).format(pattern);    
+    }
+    return moment(date).format(pattern);
   }
 
 }

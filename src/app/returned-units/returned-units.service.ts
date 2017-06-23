@@ -9,14 +9,14 @@ export class ReturnedUnitsService {
   constructor(private http: Http) { }
 
   getHNUnitsReturned() {
-        return this.http.get('src/assets/resources/units-returned-hn.json')
+        return this.http.get('assets/resources/units-returned-hn.json')
                     .toPromise()
                     .then(res => <ReturnedUnit[]> res.json().data)
                     .then(data => { return data; });
   }
 
   getMPUnitsReturned() {
-        return this.http.get('src/assets/resources/units-returned-mp.json')
+        return this.http.get('assets/resources/units-returned-mp.json')
                     .toPromise()
                     .then(res => <ReturnedUnit[]> res.json().data)
                     .then(data => { return data; });
