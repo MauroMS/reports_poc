@@ -13,9 +13,12 @@ export class ReturnedUnitsComponent implements OnInit {
 
   returnedUnits: ReturnedUnit[];
   types: SelectItem[];
-  selectedType: string = '1';
+  selectedType: '1';
   sites: SelectItem[];
   selectedSite: string;
+
+  dateFrom: Date;
+  dateTo: Date;
 
   constructor(private returnedUnitsService: ReturnedUnitsService, private sitesService: SitesService) { }
 
@@ -27,7 +30,7 @@ export class ReturnedUnitsComponent implements OnInit {
     this.sitesService.getSitesDropdown().then(ddpSites => this.sites = ddpSites);
   }
 
-  changeSelectedType(){
+  changeSelectedType() {
     if(this.selectedType === '1') {
       console.log('HN Units');
       this.getHNUnits();
@@ -37,11 +40,15 @@ export class ReturnedUnitsComponent implements OnInit {
     }
   }
 
-  getHNUnits(){
+  getHNUnits() {
     this.returnedUnitsService.getHNUnitsReturned().then(units => this.returnedUnits = units);
   }
 
-  getMPUnit(){
+  getMPUnit() {
     this.returnedUnitsService.getMPUnitsReturned().then(units => this.returnedUnits = units);
+  }
+
+  print() {
+    alert('Chuser!');
   }
 }
