@@ -656,7 +656,7 @@ module.exports = "<app-header></app-header>\r\n<router-outlet></router-outlet>"
 /***/ 374:
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\">\r\n  <div class=\"container-fluid\">\r\n    <!-- Brand and toggle get grouped for better mobile display -->\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n      <a class=\"navbar-brand\" href=\"#\">Harvey Nichols</a>\r\n    </div>\r\n\r\n    <!-- Collect the nav links, forms, and other content for toggling -->\r\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li class=\"active\"><a routerLink=\"reports\" routerLinkActive=\"active\">Home</a></li>\r\n      </ul>\r\n      <!--<p class=\"navbar-text navbar-right\">Signed in as <a href=\"#\" class=\"navbar-link\">Mauro</a></p>-->\r\n    </div><!-- /.navbar-collapse -->\r\n  </div><!-- /.container-fluid -->\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-inverse\">\r\n  <div class=\"container-fluid\">\r\n    <!-- Brand and toggle get grouped for better mobile display -->\r\n    <div class=\"navbar-header\">\r\n      <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#bs-example-navbar-collapse-1\" aria-expanded=\"false\">\r\n        <span class=\"sr-only\">Toggle navigation</span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n        <span class=\"icon-bar\"></span>\r\n      </button>\r\n      <a class=\"navbar-brand\" href=\"#\">Store</a>\r\n    </div>\r\n\r\n    <!-- Collect the nav links, forms, and other content for toggling -->\r\n    <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\r\n      <ul class=\"nav navbar-nav\">\r\n        <li class=\"active\"><a routerLink=\"reports\" routerLinkActive=\"active\">Home</a></li>\r\n      </ul>\r\n      <!--<p class=\"navbar-text navbar-right\">Signed in as <a href=\"#\" class=\"navbar-link\">Mauro</a></p>-->\r\n    </div><!-- /.navbar-collapse -->\r\n  </div><!-- /.container-fluid -->\r\n</nav>"
 
 /***/ }),
 
@@ -747,7 +747,7 @@ var ReturnedUnitsComponent = (function () {
         var _this = this;
         this.changeSelectedType();
         this.types = [];
-        this.types.push({ label: 'Harvey Nicols', value: '1' });
+        this.types.push({ label: 'Store', value: '1' });
         this.types.push({ label: 'Marketplace', value: '2' });
         this.sitesService.getSitesDropdown().then(function (ddpSites) { return _this.sites = ddpSites; });
     };
