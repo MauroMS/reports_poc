@@ -814,13 +814,13 @@ var ReturnedUnitsService = (function () {
         this.http = http;
     }
     ReturnedUnitsService.prototype.getHNUnitsReturned = function () {
-        return this.http.get('src/assets/resources/units-returned-hn.json')
+        return this.http.get('assets/resources/units-returned-hn.json')
             .toPromise()
             .then(function (res) { return res.json().data; })
             .then(function (data) { return data; });
     };
     ReturnedUnitsService.prototype.getMPUnitsReturned = function () {
-        return this.http.get('src/assets/resources/units-returned-mp.json')
+        return this.http.get('assets/resources/units-returned-mp.json')
             .toPromise()
             .then(function (res) { return res.json().data; })
             .then(function (data) { return data; });
@@ -863,7 +863,7 @@ var SitesService = (function () {
         this.http = http;
     }
     SitesService.prototype.getSites = function () {
-        return this.http.get('src/assets/resources/sites.json')
+        return this.http.get('assets/resources/sites.json')
             .toPromise()
             .then(function (res) { return res.json().data; })
             .then(function (data) {
