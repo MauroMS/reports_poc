@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { DataTableModule, ButtonModule, SelectButtonModule, SharedModule } from 'primeng/primeng';
+import { DataTableModule, ButtonModule, SelectButtonModule, SharedModule, CalendarModule, DropdownModule } from 'primeng/primeng';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ReportsRoutingModule } from './home/home-routing.module';
@@ -17,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { ReturnedUnitsComponent } from './returned-units/returned-units.component';
 
 import { ReturnedUnitsService } from './returned-units/returned-units.service';
+import { SitesService } from './sites/sites.service';
+
 
 @NgModule({
   declarations: [
@@ -28,17 +31,21 @@ import { ReturnedUnitsService } from './returned-units/returned-units.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     DataTableModule,
     HttpModule,
     SharedModule,
     ButtonModule,
+    CalendarModule,
     SelectButtonModule,
+    DropdownModule,
     AppRoutingModule,
     ReportsRoutingModule
   ],
   providers: [
-    ReturnedUnitsService
+    ReturnedUnitsService,
+    SitesService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,9 +1,10 @@
 export interface ReturnedUnit {
   dateReturned: Date;
   siteId: number;
+  siteName: string;
   orderId: number;
   departmentId: number;
-  department: string;
+  departmentName: string;
   sku: number;
   styleId: number;
   itemDescription: string;

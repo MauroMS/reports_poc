@@ -1,4 +1,10 @@
 <div class="panel panel-primary">
+  <div id="divFilters">
+    From: <p-calendar [(ngModel)]="dateFrom" [showIcon]="true" dateFormat="dd/mm/yy"></p-calendar> <span style="margin-left:35px">{{dateFrom|date}}</span>
+    To: <p-calendar [(ngModel)]="dateTo" [showIcon]="true" dateFormat="dd/mm/yy"></p-calendar> <span style="margin-left:35px">{{dateTo|date}}</span>
+    Site: <p-dropdown [options]="sites" [(ngModel)]="selectedSite" [style]="{'width':'150px'}"></p-dropdown>
+  </div>
+
   <!--<div class="panel-heading" style="text-align:left;">Raised</div>-->
   <div class="panel-body">
     <!--<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span>-->
@@ -11,16 +17,16 @@
       <p-header>
         <div class="ui-helper-clearfix">
           <p-selectButton [options]="types" [(ngModel)]="selectedType" (onChange)="changeSelectedType()" [style]="{'float':'left'}"></p-selectButton>
-          <button type="button" pButton icon="fa-print" iconPos="left" label="Print" style="float:right"></button>
+          <button type="button" pButton icon="fa-print" iconPos="left" label="Print" style="float:right" (click)="print()"></button>
           <button type="button" pButton icon="fa-file-o" iconPos="left" label="Export" (click)="dt.exportCSV()" style="float:right"></button>
         </div>
       </p-header>
 
-      <p-column field="siteId" header="Site" [sortable]="true"></p-column>
+      <p-column field="siteName" header="Site" [filter]="true" [sortable]="true" filterMatchMode="contains"></p-column>
       <p-column field="orderId" header="Order" [filter]="true" [sortable]="true"></p-column>
       <p-column field="departmentId" header="Dept Id" [filter]="true" [sortable]="true"></p-column>
 
-      <p-column field="department" header="Dept" [filter]="true" filterMatchMode="equals" [sortable]="true">
+      <p-column field="departmentName" header="Dept" [filter]="true" filterMatchMode="equals" [sortable]="true">
         <!--<ng-template pTemplate="filter" let-col>
             <p-dropdown [options]="departments" [style]="{'width':'100%'}" (onChange)="dt.filter($event.value,col.field,col.filterMatchMode)" styleClass="ui-column-filter"></p-dropdown>
         </ng-template>-->

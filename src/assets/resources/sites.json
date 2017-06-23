@@ -1,0 +1,12 @@
+{
+    "data":[
+        {"siteId":1,"siteName":"Knightsbridge"},
+        {"siteId":2,"siteName":"Leeds"},
+        {"siteId":3,"siteName":"DC"},
+        {"siteId":4,"siteName":"Manchester"},
+        {"siteId":5,"siteName":"Birmingham"},
+        {"siteId":6,"siteName":"Edinburgh"},
+        {"siteId":7,"siteName":"Bristol"},
+        {"siteId":8,"siteName":"Liverpool"}
+    ]
+}
