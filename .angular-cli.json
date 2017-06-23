@@ -33,6 +33,7 @@
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
+        "systest": "environments/environment.systest.ts",
         "prod": "environments/environment.prod.ts"
       }
     }
